@@ -1,4 +1,4 @@
-# Teste de API - PYTEST
+# Teste de API - pytest
 Projeto demostração de teste de api com pytest
 
 Pré requisitos:
