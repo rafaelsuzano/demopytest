@@ -1,2 +1,3 @@
-# demopytest
-Projeto de testes de api com pytest
+# Projeto demostração de teste de api com pytest
+
+lib
