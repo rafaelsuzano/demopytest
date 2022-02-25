@@ -1,3 +1,3 @@
-# Projeto demostração de teste de api com pytest
+# Teste de API - PYTEST
+Projeto demostração de teste de api com pytest
 
-lib
