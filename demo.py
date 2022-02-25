@@ -3,13 +3,8 @@ import requests
 import json
 import pytest
 
-#python -m pytest -v demo.py -W error::UserWarning --html=report\report.html
-#python -m pytest -v demo.py --disable-warnings  --html=report\report.html
+
 urllib3.disable_warnings()
-
-
-
-
 
 class Test_API():
 
