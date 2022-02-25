@@ -9,3 +9,5 @@ Pré requisitos:
 Command Line para executar o teste:
   - python -m pytest -v demo.py --disable-warnings  --html=report\report.html
 
+Relatório do Teste
+
