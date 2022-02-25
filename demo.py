@@ -8,7 +8,7 @@ import pytest
 urllib3.disable_warnings()
 
 
-url ="https://jsonplaceholder.typicode.com/todos/1"
+
 
 
 class Test_API():
@@ -16,7 +16,7 @@ class Test_API():
     @pytest.mark.order(1) 
     def test_Get_Status200(self):
 
-        #C1 = Valida status =  200
+        url ="https://jsonplaceholder.typicode.com/todos/1"
         r = requests.get(url, verify=False)
         print("Response:"+str(r.content))
         print("Code HTTP:"+str(r.status_code))
