@@ -12,4 +12,5 @@ Command Line para executar o teste:
 Relatório do Teste
 
 Medium : https://medium.com/@rafasuzano/teste-api-pytest-df815f72fa40
+
 Referência: https://docs.pytest.org/en/6.2.x/contents.html
