@@ -1,10 +1,11 @@
 import urllib3
-import requests
+#import requests
 import json
 import pytest
 
 
-urllib3.disable_warnings()
+
+#urllib3.disable_warnings()
 
 class Test_API():
 
