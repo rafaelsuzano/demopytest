@@ -1,2 +1,5 @@
 urllib3
 requests
+pytest
+pytest-reporter
+pytest-html
