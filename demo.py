@@ -2,8 +2,6 @@ import urllib3
 import requests
 import json
 import pytest
-import sys
-
 
 
 urllib3.disable_warnings()
@@ -58,4 +56,3 @@ class Test_API():
     @pytest.mark.skip(reason="Próximos testes")    
     def test_ProximosTeste(self):
         pass
-    sys.exit(0)
