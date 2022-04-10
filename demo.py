@@ -57,3 +57,4 @@ class Test_API():
     @pytest.mark.skip(reason="Próximos testes")    
     def test_ProximosTeste(self):
         pass
+    sys.exit(0)
