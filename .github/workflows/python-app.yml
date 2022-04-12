@@ -31,4 +31,4 @@ jobs:
 
     - name: Test with pytest
       run: |
-       python pytest -s demo.py --disable-warnings
+       python -s demo.py --disable-warnings
