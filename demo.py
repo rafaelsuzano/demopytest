@@ -2,9 +2,6 @@ import urllib3
 import requests
 import json
 import pytest
-
-
-
 urllib3.disable_warnings()
 
 class Test_API():
@@ -53,7 +50,3 @@ class Test_API():
         print(json_data['completed'])
         completed=(json_data['completed'])
         assert completed == True, f"Retorno do completed era esperado True"
-    
-    @pytest.mark.skip(reason="Próximos testes")    
-    def test_ProximosTeste(self):
-        pass
