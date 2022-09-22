@@ -5,7 +5,9 @@ Pré requisitos:
   - Python instalado
   - pip install pytest
   - pip install pytest-reporter
- -  pip install pytest-html
+  -  pip install pytest-html
+  - pip install urllib3
+  - pip  install requests
 
 Command Line para executar o teste:
   - python -m pytest -v demo.py --disable-warnings  --html=report\report.html
