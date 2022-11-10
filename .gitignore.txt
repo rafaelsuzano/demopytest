@@ -1,8 +1,0 @@
-*.html
-*.pyc
-/archive
-
-
-/.pytest_cache
-**/tests/.pytest_cache
-**/tests/_pycache_
