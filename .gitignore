@@ -2,6 +2,8 @@
 *.pyc
 /archive
 
+*.json
+report.html
 
 /.pytest_cache
 **/tests/.pytest_cache
