@@ -10,6 +10,7 @@ class Test_API():
     def test_Get_Status200(self):
 
         url ="https://jsonplaceholder.typicode.com/todos/1"
+        print(url)
         r = requests.get(url, verify=False)
         print("Response:"+str(r.content))
         print("Code HTTP:"+str(r.status_code))
@@ -25,7 +26,7 @@ class Test_API():
             "userId":1
         }
         body = json.dumps(body)
-
+        print(url)
 
         headers= {'Content-type': 'application/json; charset=UTF-8'}
 
@@ -38,6 +39,7 @@ class Test_API():
     def test_Delete_InserirDados(self):
         url= "https://jsonplaceholder.typicode.com/posts/2"
         r1 = requests.delete(url)
+        print(url)
         print("Response:"+str(r1.content))
         print("Code HTTP:"+str(r1.status_code))
         assert r1.status_code == 200, f"Erro no http status code"
@@ -46,6 +48,7 @@ class Test_API():
     def test_Verifica_Dados_Json(self):
         url ="https://jsonplaceholder.typicode.com/todos/1"
         json_data = requests.get(url, verify=False).json()
+        print(url)
         print(json_data)
         print(json_data['completed'])
         completed=(json_data['completed'])
