@@ -10,8 +10,8 @@ Pré requisitos:
   - pip  install requests
 
 Command Line para executar o teste:
-  - python -m pytest -v demo.py --disable-warnings  --html=report\report.html
-
+  - python  -m pytest -v --tb=line tests/ --disable-warnings --html=report.html --title="Report QAE Test Demo"  --self-contained-html 
+  - python3 -m pytest  --tb=line tests/ --excelreport=report.xls
 Relatório do Teste
 
 Medium : https://medium.com/@rafasuzano/teste-api-pytest-df815f72fa40
