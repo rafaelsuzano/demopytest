@@ -4,6 +4,9 @@ import json
 import pytest
 urllib3.disable_warnings()
 
+#python3 -m pytest --markers - --tb=line tests/ --excelreport=report.xls
+
+
 class Test_API():
 
     @pytest.mark.order(1) 
