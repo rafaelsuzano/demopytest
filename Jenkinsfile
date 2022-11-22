@@ -23,9 +23,7 @@ pipeline {
       }
       post {
         
-            failure {
-                slackSend failOnError:true message:"Build failed  - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
-            }
+     
         
     always {
         slackSend( channel: "#testejenkins", token: "yLgYXC6q0hURolpnHGx5cjAi", color: "good", message: "Report gerado !!!")
@@ -39,8 +37,7 @@ pipeline {
               reportName: "Report"])
  
     }
-    }
-  }      
+     
  
     }
  }     
