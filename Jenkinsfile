@@ -15,7 +15,7 @@ ${env.BUILD_NUMBER}
     stage('Install dependency') {
       steps {
         sh 'pip install -r requirements.txt'
-        slackSend( channel: "#testejenkins", token: "yLgYXC6q0hURolpnHGx5cjAi", color: "good", message: "Instalando dependencia ${env.JOB_NAME}  ${env.BUILD_NUMBER}"   ")
+        slackSend( channel: "#testejenkins", token: "yLgYXC6q0hURolpnHGx5cjAi", color: "good", message: "Instalando dependencia ${env.JOB_NAME}  build ${env.BUILD_NUMBER}")
       }
     }
     stage('Running Test') {
