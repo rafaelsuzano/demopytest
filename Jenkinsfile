@@ -19,13 +19,13 @@ pipeline {
     stage('Running Test') {
       steps {
         sh 'python3  -m pytest -v --tb=line tests/ --disable-warnings --html=report.html --title="Report QAE Test BE"  --self-contained-html '
-        slackSend( channel: "#testejenkins", token: "yLgYXC6q0hURolpnHGx5cjAi", color: "good", message: "Executando Testes")
+        slackSend( channel: "#testejenkins", token: "yLgYXC6q0hURolpnHGx5cjAi", color: "F7FF00", message: "Executando Testes")
       }
       post {
 
           failure {
-            slackSend (color:'danger', message: "Deu erro no teste !!!")  
-        
+            
+            slackSend( channel: "#testejenkins", token: "yLgYXC6q0hURolpnHGx5cjAi", color: "good", message: "Report gerado com erro !!!")
         
         
         
