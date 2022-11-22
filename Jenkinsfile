@@ -25,7 +25,7 @@ pipeline {
       post {
 
            success {
-           slackSend( channel: "#testejenkins", token: "yLgYXC6q0hURolpnHGx5cjAi", color: "FF2E00", message: "Report gerado com sucesso!!!")
+           slackSend( channel: "#testejenkins", token: "yLgYXC6q0hURolpnHGx5cjAi", color: "good", message: "Report gerado com sucesso!!!")
         }
         
         
