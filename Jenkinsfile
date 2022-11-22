@@ -13,15 +13,17 @@ pipeline {
     stage('Install dependency') {
       steps {
         sh 'pip install -r requirements.txt'
+        slackSend( channel: "#testejenkins", token: "yLgYXC6q0hURolpnHGx5cjAi", color: "good", message: "Instalando dependencia")
       }
     }
     stage('Running Test') {
       steps {
         sh 'python3  -m pytest -v --tb=line tests/ --disable-warnings --html=report.html --title="Report QAE Test BE"  --self-contained-html '
+        slackSend( channel: "#testejenkins", token: "yLgYXC6q0hURolpnHGx5cjAi", color: "good", message: "Executando Testes")
       }
       post {
     always {
-        slackSend( channel: "#testejenkins", token: "yLgYXC6q0hURolpnHGx5cjAi", color: "good", message: "Test Email")
+        slackSend( channel: "#testejenkins", token: "yLgYXC6q0hURolpnHGx5cjAi", color: "good", message: "Report gerado !!!")
         publishHTML (target: [
 
               allowMissing: false,
@@ -32,9 +34,15 @@ pipeline {
               reportName: "Report"])
     }
   }      
+ 
+   post {
+            failure {
+                slackSend failOnError:true message:"Build failed  - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+            }
+        }
+ 
+ 
+ 
  }     
   }
-
-
-
 }
