@@ -18,7 +18,7 @@ class Test_API():
         r = requests.get(url, verify=False)
         print("Response:"+str(r.content))
         print("Code HTTP:"+str(r.status_code))
-        assert r.status_code == 201, f"Erro no http status code"
+        assert r.status_code == 200, f"Erro no http status code"
         
     @pytest.mark.order(2)    
     def test_Put_InserirDados(self):
