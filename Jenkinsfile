@@ -37,6 +37,8 @@ pipeline {
               reportDir: '',
               reportFiles: "pytest_html_report.html",
               reportName: "Report"])
+ 
+    }
     }
   }      
  
