@@ -21,6 +21,7 @@ pipeline {
       }
       post {
     always {
+        slackSend( channel: "#testejenkins", token: "yLgYXC6q0hURolpnHGx5cjAi", color: "good", message: "Test Email")
         publishHTML (target: [
 
               allowMissing: false,
@@ -31,14 +32,9 @@ pipeline {
               reportName: "Report"])
     }
   }      
-    post{
-        always{
-            slackSend( channel: "#testejenkins", token: "yLgYXC6q0hURolpnHGx5cjAi", color: "good", message: "Test Email")
-        }
- 
- 
- 
-  }     
+ }     
   }
-}
+
+
+
 }
