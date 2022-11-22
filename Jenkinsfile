@@ -36,7 +36,7 @@ pipeline {
         
         
     always {
-        slackSend( channel: "#testejenkins", token: "yLgYXC6q0hURolpnHGx5cjAi", color: "good", message: "Report gerado  ${env.JOB_NAME}" !!!")
+        slackSend( channel: "#testejenkins", token: "yLgYXC6q0hURolpnHGx5cjAi", color: "good", message: "Report gerado  ${env.JOB_NAME} !!!")
         publishHTML (target: [
 
               allowMissing: false,
