@@ -35,15 +35,7 @@ pipeline {
     }
   }      
  
-   post {
-            failure {
-                 slackSend(channel: "#testejenkins", token: "yLgYXC6q0hURolpnHGx5cjAi", color: "reed", message: "${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}")    
-      
-            }
-        }
- 
- 
- 
+   
  }     
   }
 }
