@@ -24,7 +24,7 @@ pipeline {
       post {
 
           failure {
-            slackSend (color:'danger', message: "<@$userIds>Error in build ${env.JOB_NAME}")  
+            slackSend (color:'danger', message: "Deu erro no teste !!!")  
         
         
         
