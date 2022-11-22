@@ -10,7 +10,7 @@ pipeline {
 
     }
 
-${env.BUILD_NUMBER}  
+
 
     stage('Install dependency') {
       steps {
