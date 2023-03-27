@@ -1,7 +1,7 @@
 pipeline {
   agent any
+    agent { docker { image 'rafaelsuzano/demopytest:latest' } }
 
-  
   stages {
     stage('Version') {
       steps {
