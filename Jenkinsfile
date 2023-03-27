@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('Version') {
       steps {
-        bat  'python3 --version'
+        bat  'python --version'
       }
 
     }
@@ -21,7 +21,7 @@ pipeline {
     stage('Running Test') {
       steps {
               slackSend( channel: "#testejenkins", token: "yLgYXC6q0hURolpnHGx5cjAi", color: "F7FF00", message: "Executando Testes ${env.JOB_NAME} build ${env.BUILD_NUMBER} ")
-        bat  'python3  -m pytest -v --tb=line tests/ --disable-warnings --html=report.html --title="Report QAE Test BE"  --self-contained-html '
+        bat  'python  -m pytest -v --tb=line tests/ --disable-warnings --html=report.html --title="Report QAE Test BE"  --self-contained-html '
   
       }
       post {
