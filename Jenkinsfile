@@ -1,14 +1,7 @@
 pipeline {
   agent any
 
-  
-  stages {
-    stage('Version') {
-      steps {
 
-      }
-
-    }
 
 
 
