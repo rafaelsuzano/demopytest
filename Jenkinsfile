@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('Version') {
       steps {
-        sh 'python --version'
+        bat  'python --version'
       }
 
     }
@@ -14,14 +14,14 @@ pipeline {
 
     stage('Install dependency') {
       steps {
-        sh 'pip install -r requirements.txt'
+        bat  'pip install -r requirements.txt'
         slackSend( channel: "#testejenkins", token: "yLgYXC6q0hURolpnHGx5cjAi", color: "0046FF", message: "Instalando dependencia ${env.JOB_NAME}  build ${env.BUILD_NUMBER} ")
       }
     }
     stage('Running Test') {
       steps {
               slackSend( channel: "#testejenkins", token: "yLgYXC6q0hURolpnHGx5cjAi", color: "F7FF00", message: "Executando Testes ${env.JOB_NAME} build ${env.BUILD_NUMBER} ")
-        sh 'python  -m pytest -v --tb=line tests/ --disable-warnings --html=report.html --title="Report QAE Test BE"  --self-contained-html '
+        bat  'python  -m pytest -v --tb=line tests/ --disable-warnings --html=report.html --title="Report QAE Test BE"  --self-contained-html '
   
       }
       post {
