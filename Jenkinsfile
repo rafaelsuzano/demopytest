@@ -1,36 +1,33 @@
 pipeline {
-  agent any
-
-  
-  stages {
-    stage('Version') {
-      steps {
-        sh 'python3 --version'
-      }
-
-    }
+02
+    agent any
+03
  
-    stage('Install dependency') {
-      steps {
-        sh 'pip install -r requirements.txt'
-      }
+04
+    stages {
+05
+        stage('STAGE 00'){
+06
+            steps{
+07
+                echo "Pipeline Usando Jenkinsfile"
+08
+            }
+09
+        }
+10
+ 
+11
+        stage('STAGE 01'){
+12
+            steps{
+13
+                echo "Pipeline Usando Jenkinsfile"
+14
+            }
+15
+        }
+16
     }
-    stage('Running Test') {
-      steps {
-        sh 'python3  -m pytest -v --tb=line tests/ --disable-warnings --html=report.html --title="Report QAE Test BE "  --self-contained-html'
-      }
-      post {
-    always {
-        publishHTML (target: [
-
-              allowMissing: false,
-              alwaysLinkToLastBuild: false,
-              keepAll: true,
-              reportDir: '',
-              reportFiles: "pytest_html_report.html",
-              reportName: "Report"])
-    }
-  }      
- }     
-  }
+17
 }
