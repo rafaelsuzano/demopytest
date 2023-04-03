@@ -1,8 +1,5 @@
 pipeline {
-     
-	docker {
-        	 image 'rafaelsuzano/demopytest:latest' 
-        }
+   
   
   stages {
     stage('Version') {
