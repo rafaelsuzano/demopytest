@@ -1,23 +1,23 @@
 
 {
-3    "name": "demopytest",
-4    "version": "1.0.0",
-5    "description": "",
-6    "scripts": {
-7        "build": "echo \"No build specified\" && exit 1",
-8        "test": "python -m pytest -v demo.py --disable-warnings  --html=report.html",
-9        "start": "python -m pytest -v demo.py --disable-warnings  --html=report.html"
-10    },
-11    "repository": {
-12        "type": "git",
-13        "url": "git+https://github.com/rafaelsuzano/demopytest.git"
-14    },
-15    "author": "",
-16    "license": "ISC",
-17    "bugs": {
-18        "url": "https://github.com/rafaelsuzano/demopytest/issues"
-19    },
-20    "homepage": "https://github.com/rafaelsuzano/demopytest#readme"
-21}
-22 
+    "name": "demopytest",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "build": "echo \"No build specified\" && exit 1",
+        "test": "python -m pytest -v demo.py --disable-warnings  --html=report.html",
+        "start": "python -m pytest -v demo.py --disable-warnings  --html=report.html"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rafaelsuzano/demopytest.git"
+    },
+   "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/rafaelsuzano/demopytest/issues"
+    },
+    "homepage": "https://github.com/rafaelsuzano/demopytest#readme"
+}
+ 
 
