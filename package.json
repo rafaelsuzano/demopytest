@@ -4,7 +4,7 @@
     "version": "1.0.0",
     "description": "",
     "scripts": {
-        "build": "echo \"No build specified\" && exit 1",
+    
         "test": "python -m pytest -v demo.py --disable-warnings  --html=report.html",
         "start": "python -m pytest -v demo.py --disable-warnings  --html=report.html"
     },
