@@ -5,7 +5,7 @@
 5    "description": "",
 6    "scripts": {
 7        "build": "echo \"No build specified\" && exit 1",
-8        "test": "python -m pytest -v demo.py --disable-warnings  --html=report.html,
+8        "test": "python -m pytest -v demo.py --disable-warnings  --html=report.html",
 9        "start": "python -m pytest -v demo.py --disable-warnings  --html=report.html"
 10    },
 11    "repository": {
