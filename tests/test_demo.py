@@ -57,3 +57,15 @@ class Test_API():
         print(json_data['completed'])
         completed=(json_data['completed'])
         assert True == True, f"Retorno do completed era esperado True"
+        
+    @pytest.mark.order(5) 
+    def test_Verifica_Dados_Json(self):
+        url ="https://jsonplaceholder.typicode.com/todos/1"
+        json_data = requests.get(url, verify=False).json()
+        print(url)
+        print(json_data)
+        print(json_data['completed'])
+        completed=(json_data['completed'])
+        assert True == False, f"Retorno do completed era esperado True"
+        
+        
