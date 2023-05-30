@@ -20,14 +20,5 @@ jobs:
     - name: Execute Teste
       run: python -m pytest -v --tb=line tests/ --disable-warnings --html=report.html --title="Report QAE Test Demo" --self-contained-html
       
-    - name: slack-send
-  # You may pin to the exact commit or the version.
-  # uses: slackapi/slack-github-action@e28cf165c92ffef168d23c5c9000cffc8a25e117
-      uses: slackapi/slack-github-action@v1.24.0
-      with:
-        # Slack channel ID where message will be posted. Needed if using bot token
-          channel-id: demopytest
-          # Message to post into Slack. Needed if using bot token
-          slack-message: Executou o teste
-     
+
 
