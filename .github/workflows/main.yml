@@ -20,5 +20,8 @@ jobs:
     - name: Execute Teste
       run: python -m pytest -v --tb=line tests/ --disable-warnings --html=report.html --title="Report QAE Test Demo" --self-contained-html
       
-
+    - name: pytest-reporter
+    # You may pin to the exact commit or the version.
+    # uses: dima-engineer/pytest-reporter@9c75a90e04ac7122e7f8c391869b05e6ebf67e85
+      uses: dima-engineer/pytest-reporter@v2.1.1
 
