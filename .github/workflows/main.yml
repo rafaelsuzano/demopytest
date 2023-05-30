@@ -1,6 +1,11 @@
 name: DemoPytest
 
-on: [push]
+on:
+  workflow_dispatch:
+    inputs:
+      cli:
+        description: Run test cypress command line
+        default: python -m pytest -v --tb=line tests/ --disable-warnings --html=report.html --title="Report QAE Test Demo" --self-contained-html
 
 jobs:
   Execute-demoPytest:
