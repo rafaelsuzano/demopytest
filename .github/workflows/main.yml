@@ -20,5 +20,13 @@ jobs:
     - name: Execute Teste
       run: python -m pytest -v --tb=line tests/ --disable-warnings --html=report.html --title="Report QAE Test Demo" --self-contained-html
       
-
+    - name: Run pytest
+      uses: pavelzw/pytest-action@v2
+      with:
+        verbose: true
+        emoji: true
+        job-summary: true
+        custom-arguments: '-q'
+        click-to-expand: true
+        report-title: 'Report QAE Test Demo'
 
