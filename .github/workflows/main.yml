@@ -12,15 +12,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - name: Run pytest
-      uses: pavelzw/pytest-action@v2
-      run: python -m pytest -v --tb=line tests/ --disable-warnings --html=report.html --title="Report QAE Test Demo" --self-contained-html
-      with:
-        verbose: true
-        emoji: true
-        job-summary: true
-        custom-arguments: '-q'
-        click-to-expand: true
-        report-title: 'Report QAE Test Demo'
+      - name: Get Code
+        uses: actions/checkout@v3.5.2
+   
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      
+      - name: Execute Teste
+        run: python -m pytest -v --tb=line tests/ --disable-warnings --html=report.html --title="Report QAE Test Demo" --self-contained-html
+      
+      - name: HTML Preview
+        id: html_preview
+        uses: pavi2410/html-preview-action@v2
+        with:
+          html_file: 'report.html'
         
 
