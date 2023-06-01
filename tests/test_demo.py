@@ -67,5 +67,5 @@ class Test_API():
         print(json_data['completed'])
         completed=(json_data['completed'])
         assert True == False, f"Retorno do completed era esperado True"
-        
+exit()        
         
