@@ -2,6 +2,8 @@ import urllib3
 import requests
 import json
 import pytest
+import sys, os
+
 urllib3.disable_warnings()
 
 #python3 -m pytest --markers - --tb=line tests/ --excelreport=report.xls
@@ -67,5 +69,5 @@ class Test_API():
         print(json_data['completed'])
         completed=(json_data['completed'])
         assert True == False, f"Retorno do completed era esperado True"
-exit()        
+os._exit(1)       
         
