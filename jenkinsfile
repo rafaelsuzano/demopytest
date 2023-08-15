@@ -37,7 +37,7 @@ pipeline {
         stage('Send Test Email') {
             steps {
 
-            emailext attachmentsPattern: '*.html',      
+            emailext attachmentsPattern: 'job\\DemoPytest\\Report\\*.html',      
             body: '''${SCRIPT, template="groovy_html.template"}''', 
             subject: currentBuild.currentResult + " : " + env.JOB_NAME, 
             to: 'rafaelsuzano@hotmail.com'          
