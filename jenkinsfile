@@ -36,10 +36,12 @@ pipeline {
 
         stage('Send Test Email') {
             steps {
-       emailext(
-      subject: "teste",
-      attachLog: true, attachmentsPattern: "pytest_html_report.html",compressLog: true,
-      body: 'Test Email' ,to: 'rafaelsuzano@hotmail.com')
+emailext (
+        subject: "some subject",
+        body:   'job/DemoPytest/Report/report.html,
+        to: "rafaelsuzano@hotmail.com"
+        )  
+  
 }
         }
       }
