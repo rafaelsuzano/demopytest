@@ -36,7 +36,7 @@ pipeline {
 
         stage('Send Test Email') {
             steps {
-                 env.ForEmailPlugin = env.WORKSPACE      
+
             emailext attachmentsPattern: '*.html',      
             body: '''${SCRIPT, template="groovy_html.template"}''', 
             subject: currentBuild.currentResult + " : " + env.JOB_NAME, 
