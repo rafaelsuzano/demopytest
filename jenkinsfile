@@ -38,7 +38,7 @@ pipeline {
             steps {
 emailext (
         subject: "some subject",
-        body:   'job/DemoPytest/Report/report.html,
+        body:   "job/DemoPytest/Report/report.html",
         to: "rafaelsuzano@hotmail.com"
         )  
   
