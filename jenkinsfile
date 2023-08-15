@@ -37,7 +37,7 @@ pipeline {
         stage('Send Test Email') {
             steps {
 
-            emailext attachmentsPattern: 'pytest_html_report.html',      
+  
             body: 'teste', 
             subject: currentBuild.currentResult + " : " + env.JOB_NAME, 
             to: 'rafaelsuzano@hotmail.com'          
