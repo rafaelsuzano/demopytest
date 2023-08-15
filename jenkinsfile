@@ -38,7 +38,7 @@ pipeline {
             steps {
        emailext(
       subject: "teste",
-      attachLog: true, attachmentsPattern: "**/*.html",compressLog: true,
+      attachLog: true, attachmentsPattern: "pytest_html_report.html",compressLog: true,
       body: 'Test Email' ,to: 'rafaelsuzano@hotmail.com')
 }
         }
