@@ -36,7 +36,7 @@ pipeline {
 
         stage('Send Test Email') {
             steps {
-                mail(body: 'Teste DemoPytest.', subject: 'Demo Pytest ', to: 'rafaelsuzano@hotmail.com')
+                mail(emailext attachmentsPattern: '**/report.html',body: 'Teste DemoPytest.', subject: 'Demo Pytest ', to: 'rafaelsuzano@hotmail.com')
           }
         }
       }
