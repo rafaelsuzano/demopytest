@@ -36,8 +36,13 @@ pipeline {
 
         stage('Send Test Email') {
             steps {
-                mail(emailext attachmentsPattern: '**/report.html',body: 'Teste DemoPytest.', subject: 'Demo Pytest ', to: 'rafaelsuzano@hotmail.com')
-          }
+                 env.ForEmailPlugin = env.WORKSPACE      
+            emailext attachmentsPattern: '*.html',      
+            body: '''${SCRIPT, template="groovy_html.template"}''', 
+            subject: currentBuild.currentResult + " : " + env.JOB_NAME, 
+            to: 'rafaelsuzano@hotmail.com'          
+
+}
         }
       }
   }
