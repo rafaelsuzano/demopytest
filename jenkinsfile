@@ -39,7 +39,7 @@ pipeline {
        emailext(
       subject: "teste",
       attachLog: true, attachmentsPattern: "**/*.html",compressLog: true,
-      body: "Test Email" ,to: rafaelsuzano@hotmail.com)
+      body: 'Test Email' ,to: 'rafaelsuzano@hotmail.com')
 }
         }
       }
