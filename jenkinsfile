@@ -21,7 +21,7 @@ pipeline {
       }
       post {
     always {
- slackSend( channel: "#demopytest", token: "6yU1qlFHQfWJCJsZw0XfCkyO", color: "good", message: "Test Email")
+ slackSend( channel: "demopytest", token: "6yU1qlFHQfWJCJsZw0XfCkyO", color: "good", message: "Test Email")
         publishHTML (target: [
 
               allowMissing: false,
