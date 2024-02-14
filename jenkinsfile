@@ -23,7 +23,7 @@ pipeline {
       }
       post {
     always {
- slackSend( channel: "demopytest", token: "6yU1qlFHQfWJCJsZw0XfCkyO", color: "good", message:"Automação executada com sucesso  ${env.JOB_NAME}  build ${currentBuild.number} Relatório  http://localhost:8080/job/demopytest/${currentBuild.number}/execution/node/3/ws/report.html"")
+ slackSend( channel: "demopytest", token: "6yU1qlFHQfWJCJsZw0XfCkyO", color: "good", message:"Automação executada com sucesso  ${env.JOB_NAME}  build ${currentBuild.number} Relatório  http://localhost:8080/job/demopytest/${currentBuild.number}/execution/node/3/ws/report.html")
         publishHTML (target: [
 
               allowMissing: false,
