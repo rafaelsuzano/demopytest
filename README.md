@@ -17,3 +17,5 @@ Relatório do Teste
 Medium : https://medium.com/@rafasuzano/teste-api-pytest-df815f72fa40
 
 Referência: https://docs.pytest.org/en/6.2.x/contents.html
+System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "")
+System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "default-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self' 'unsafe-inline' data:;")
