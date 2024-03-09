@@ -17,7 +17,7 @@ pipeline {
     }
     stage('Running Test') {
       steps {
-        sh 'python  -m pytest -v --tb=line tests/ --disable-warnings --html=report.html --title="Report QAE Test BE "  --self-contained-html'
+        sh 'python3  -m pytest -v --tb=line tests/ --disable-warnings --html=report.html --title="Report QAE Test BE "  --self-contained-html'
 
 
       }
