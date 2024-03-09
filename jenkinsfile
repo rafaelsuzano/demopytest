@@ -12,12 +12,12 @@ pipeline {
  
     stage('Install dependency') {
       steps {
-        sh 'python3 -m pip install -r requirements.txt '
+        sh 'python3 -m pip install -r requirements.txt --break-system-packages'
       }
     }
     stage('Running Test') {
       steps {
-        sh 'python3  -m pytest -v --tb=line tests/ --disable-warnings --html=report.html --title="Report QAE Test BE "  --self-contained-html'
+        sh 'python  -m pytest -v --tb=line tests/ --disable-warnings --html=report.html --title="Report QAE Test BE "  --self-contained-html'
 
 
       }
