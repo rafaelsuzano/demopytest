@@ -5,19 +5,19 @@ pipeline {
   stages {
     stage('Version') {
       steps {
-        sh 'python --version'
+        sh 'python3 --version'
       }
 
     }
  
     stage('Install dependency') {
       steps {
-        sh 'python -m pip install -r requirements.txt --break-system-packages'
+        sh 'python3 -m pip install -r requirements.txt --break-system-packages'
       }
     }
     stage('Running Test') {
       steps {
-        sh 'python  -m pytest -v --tb=line tests/ --disable-warnings --html=report.html --title="Report QAE Test BE "  --self-contained-html'
+        sh 'python3  -m pytest -v --tb=line tests/ --disable-warnings --html=report.html --title="Report QAE Test BE "  --self-contained-html'
 
 
       }
