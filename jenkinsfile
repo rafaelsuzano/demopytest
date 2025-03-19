@@ -21,19 +21,7 @@ pipeline {
 
 
       }
-      post {
-    always {
- slackSend( channel: "teste_automacao", token: "zc4Vced0yE6zGgK90V0znOgd", color: "good", message:"Automação executada com sucesso  ${env.JOB_NAME}  build ${currentBuild.number} Relatório  http://localhost:8080/job/demopytest/${currentBuild.number}/execution/node/3/ws/report.html")
-        publishHTML (target: [
-
-              allowMissing: false,
-              alwaysLinkToLastBuild: false,
-              keepAll: true,
-              reportDir: '',
-              reportFiles: "pytest_html_report.html",
-              reportName: "Report"])
-    }
-  }      
+     
  }  
 
 
